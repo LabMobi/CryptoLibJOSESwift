@@ -50,9 +50,13 @@ extension Data: ExpressibleAsRSAPublicKeyComponents {
 
         // Remove potential leading zero byte.
         // See https://tools.ietf.org/html/rfc7518#section-6.3.1.1.
+        
+        // Feature disabled for CryptoLib purposes
+        /**
         if modulus.first == 0x00 {
             modulus = Array(modulus.dropFirst())
         }
+        *//
 
         return (
             Data(modulus),

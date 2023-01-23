@@ -56,7 +56,7 @@ extension Data: ExpressibleAsRSAPublicKeyComponents {
         if modulus.first == 0x00 {
             modulus = Array(modulus.dropFirst())
         }
-        *//
+        */
 
         return (
             Data(modulus),
